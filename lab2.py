@@ -24,17 +24,18 @@ def draw_line(amount):
     return ("-" * amount)
 
 # Call your functions, printing out the return result where appropriate
+#hello
 print(say_hello("ward"))
 
-
+#triple
 num = 2
 print(triple(num))
 
-
+#add
 x = 3
 y = 5
 print(sum(x, y))
 
-
+#line
 amount = 17
 print(draw_line(amount))
