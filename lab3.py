@@ -22,9 +22,31 @@ def get_number(prompt):
 
 # Use the get_number function to ask for a numerator, then again for a denominator.
 # Divide the numerator by the denominator and print the result, handling any division by zero errors.
+def fraction():
+    numerator = get_number("Please enter your numerator:")
+    while True:
+        try:
+            denominator = get_number("Please enter your denominator:")
+            answer = numerator / denominator
+            return answer     
+        except:
+            print("Cannot divide by zero")
 
 
 
 # Use the get_number function to ask the user for an index to access an element from a predefined list. 
 # Print out the value from the list, handling the index error if the user selects a non-existent index.
 a = get_number("Please enter an integer:")
+
+print(fraction())
+
+
+
+
+
+
+
+
+
+my_list = ["jenga", "jenga","jenga"]
+print(my_list[2])
