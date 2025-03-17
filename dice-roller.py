@@ -13,24 +13,34 @@ def get_number(prompt):
     while True:
         try:
             userint = int(input(prompt))
-            return userint
-        
+            if userint > 0: #ensures number is positive
+                return userint
+            else:
+                print("Please enter a positive number.")
+
         except:
-            print("Please enter a valid number")
+            print("Please enter a valid number") 
 
 
-#amount of dice function
-def dice_amount():
-    userdiceamount = get_number("Please enter the amount of dice you want to roll:")
-    return userdiceamount
-
-#amount of dice sides function
-def dice_sides():
-    userdicesides = get_number("Please enter the amount of sides you want on your dice:")
-    return userdicesides
-
-
-
+#dice function
+def diceroll(sides, qty):
+    
+    total = 0
+    for roll in range(1, qty):
+        rnd = random.randint(1, sides)
+        total = total + rnd
+        print(rnd)
+    print(f"The total is {total}")    
 
 
 
+
+
+#gets user inputs
+sides = get_number("Please enter the amount of sides you want on your dice: ")
+qty = get_number("Please enter the amount of dice you want to roll :")
+
+
+#calls functions
+print("Rolling...")
+diceroll(sides, qty + 1)
