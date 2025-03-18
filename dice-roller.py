@@ -42,5 +42,4 @@ qty = get_number("Please enter the amount of dice you want to roll :")
 
 
 #calls functions
-print("Rolling...")
 diceroll(sides, qty + 1)
